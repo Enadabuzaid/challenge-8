@@ -1,0 +1,120 @@
+:root{
+    --font-lexend : 'Lexend Deca', sans-serif;
+    --font-big-sholuder : 'Big Shoulders Display', cursive;
+    --font-size : 16px;
+    --orange : hsl(31, 77%, 52%);
+    --dark-cyan : hsl(184, 100%, 22%);
+    --darker-cyan : hsl(179, 100%, 13%);
+    --white :hsl(0, 0%, 95%);
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-family: --font-lexend;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.box {
+    padding: 40px;
+}
+
+.box .box-text{
+    color: var(--white);
+}
+
+.box .box-text h2{
+    font-family: var(--font-big-sholuder);
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 1rem 0;
+}
+
+.box .box-text p{
+    color: var(--white);
+    line-height: 1.6;
+    font-family: var(--font-lexend);
+}
+
+.box .btn {
+    text-decoration: none;
+    background-color: var(--white);
+    padding: 13px 27px;
+    border-radius: 26px;
+    margin-top: 60px;
+    display: inline-block;
+    border: 2px solid var(--white);
+    font-family: var(--font-lexend);
+    transition: all .4s ease-in-out;
+}
+
+.box .btn:hover {
+    color: var(--white);
+    background: transparent;
+}
+
+.box1 .box-btn{
+    color: var(--orange);
+}
+
+.box2 .box-btn{
+    color: var(--dark-cyan);
+}
+
+.box3 .box-btn{
+    color: var(--darker-cyan);
+}
+
+.box1{
+    background-color: var(--orange);
+}
+
+.box2{
+    background-color: var(--dark-cyan);
+}
+
+.box3{
+    background-color: var(--darker-cyan);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .wrapper-boxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .wrapper-boxes {
+        margin: 2rem .5rem;
+    }
+}
